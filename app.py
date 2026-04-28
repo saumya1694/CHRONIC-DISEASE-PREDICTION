@@ -5,16 +5,21 @@ import os
 
 app = Flask(__name__)
 
-# Load model
+# Load trained model
 model = pickle.load(open('Diabetes.pkl', 'rb'))
 
-@app.route('/', methods=['GET'])
-def Home():
+
+# Home route
+@app.route('/')
+def home():
     return render_template('index.html')
 
-@app.route("/predict", methods=['POST'])
+
+# Prediction route
+@app.route('/predict', methods=['POST'])
 def predict():
     try:
+        # Get values from form
         Pregnancies = int(request.form['Pregnancies'])
         Glucose = int(request.form['Glucose'])
         BloodPressure = int(request.form['BloodPressure'])
@@ -24,18 +29,25 @@ def predict():
         DiabetesPedigreeFunction = float(request.form['DiabetesPedigreeFunction'])
         Age = int(request.form['Age'])
 
-        values = np.array([[Pregnancies, Glucose, BloodPressure, SkinThickness,
-                            Insulin, BMI, DiabetesPedigreeFunction, Age]])
+        # Prepare input for model
+        values = np.array([[Pregnancies, Glucose, BloodPressure,
+                            SkinThickness, Insulin, BMI,
+                            DiabetesPedigreeFunction, Age]])
 
-        prediction = model.predict(values)
+        # Predict
+        prediction = model.predict(values)[0]
 
-        result = "Diabetic" if prediction[0] == 1 else "Not Diabetic"
+        # Result
+        result = "Diabetic" if prediction == 1 else "Not Diabetic"
 
-        return render_template('result.html', prediction=result)
+        # Send result to HTML
+        return render_template('result.html', prediction_text=result)
 
     except Exception as e:
-        return f"Error: {e}"
+        return f"Error occurred: {e}"
 
+
+# Run app (Render compatible)
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)

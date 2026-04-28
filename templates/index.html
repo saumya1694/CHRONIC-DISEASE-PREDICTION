@@ -1,177 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Diabetes Prediction Model</title>
-
+    <title>Diabetes Prediction</title>
 </head>
+
 <body>
     <div class="container">
-        <h2 class='container-heading'><span class="heading_font">Diabetes Prediction</span></h2>
+        <h2 class="container-heading">
+            <span class="heading_font">Diabetes Prediction</span>
+        </h2>
     </div>
 
     <div class="ml-container">
-        <form action="{{ url_for('predict') }}" method="POST">
-            <br>
+        <!-- FIXED FORM -->
+        <form action="/predict" method="post">
+
             <h3>Pregnancies</h3>
-            <input id="first" name="Pregnancies" placeholder="Number of Pregnancies" required="required">
-            <br>
+            <input name="Pregnancies" placeholder="Number of Pregnancies" required>
+
             <h3>Glucose</h3>
-            <input id="second" name="Glucose" placeholder="Glucose" required="required">
-            <br>
+            <input name="Glucose" placeholder="Glucose" required>
+
             <h3>Blood Pressure</h3>
-            <input id="third" name="BloodPressure" placeholder="(mm Hg)" required="required">
-            <br>
+            <input name="BloodPressure" placeholder="(mm Hg)" required>
+
             <h3>Skin Thickness</h3>
-            <input id="fourth" name="SkinThickness" placeholder="(mm)" required="required">
-            <br>
+            <input name="SkinThickness" placeholder="(mm)" required>
+
             <h3>Insulin</h3>
-            <input id="fifth" name="Insulin" placeholder="(mu U/ml)" required="required">
-            <br>
+            <input name="Insulin" placeholder="(mu U/ml)" required>
+
             <h3>Body Mass Index</h3>
-            <input id="sixth" name="BMI" placeholder="weight in kg/(height in m)^2" required="required">
-            <br>
+            <input name="BMI" placeholder="BMI" required>
+
             <h3>Diabetes Pedigree Function</h3>
-            <input id="seventh" name="DiabetesPedigreeFunction" placeholder="DPF" required="required">
-            <br>
+            <input name="DiabetesPedigreeFunction" placeholder="DPF" required>
+
             <h3>Age</h3>
-            <input id="eight" name="Age" placeholder="In Years" required="required">
-            <br>
-            <br>
-            <br>
-            <button id="sub" type="submit ">Submit</button>
-            <br>
-            <br>
-            <h3>{{ prediction }}</h3>
-            <br>
-            <br>
-            <p class='footer-description'>26_CS_4E_18</p>
+            <input name="Age" placeholder="Age in years" required>
+
+            <br><br>
+            <button id="sub" type="submit">Submit</button>
 
         </form>
     </div>
 
-
-
-
-<style>
-
-/* Background Image */
-body
-{
-background-image:url("https://mk0mydrtest3eri40dsq.kinstacdn.com/wp-content/uploads/2019/01/AdobeStock_331018077-scaled-1210x700.jpg");
-height: 100%;
-
-/* Center and scale the image nicely */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-
-}
-
-/* Color */
-body{
-	font-family: Arial, Helvetica,sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-
-/* Heading Font */
-.container-heading{
-    margin: 0;
-}
-
-.heading_font{
-    color: #black;
-	font-family: 'Pacifico', cursive;
-	font-size: 50px;
-	font-weight: normal;
-}
-
-
-
-/* Box */
-        #first {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
+    <style>
+        body {
+            background-image: url("https://mk0mydrtest3eri40dsq.kinstacdn.com/wp-content/uploads/2019/01/AdobeStock_331018077-scaled-1210x700.jpg");
+            background-position: center;
+            background-size: cover;
+            font-family: Arial, Helvetica, sans-serif;
             text-align: center;
         }
 
-        #second {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
+        input {
+            border-radius: 10px;
+            height: 30px;
+            font-size: 16px;
             text-align: center;
+            margin-bottom: 10px;
         }
 
-        #third {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        #fourth {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        #fifth {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        #sixth {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        #seventh {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        #eight {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-
-/* Submit Button */
-#sub {
+        #sub {
             width: 120px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
         }
 
-
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-</style>
-
+        .heading_font {
+            font-size: 40px;
+            color: black;
+        }
+    </style>
 
 </body>
-
 </html>
-
-
