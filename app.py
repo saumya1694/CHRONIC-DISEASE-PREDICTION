@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-# Load model safely
+# Load model
 model = pickle.load(open('Diabetes.pkl', 'rb'))
 
 @app.route('/', methods=['GET'])
