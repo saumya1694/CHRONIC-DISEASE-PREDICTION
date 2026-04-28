@@ -1,0 +1,52 @@
+[33mcommit c8e7739d08307c0582b97bd28d0b690ef417598c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mold-version[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: Saumya Verma <2k22.cse.2213318@gmail.com>
+Date:   Tue Apr 28 20:35:35 2026 +0530
+
+    fixed result page logic
+
+[33mcommit 09a9bb116de60022263ff1f9914119e58bfb2677[m
+Merge: c472212 af6590e
+Author: Saumya Verma <2k22.cse.2213318@gmail.com>
+Date:   Tue Apr 28 20:20:34 2026 +0530
+
+    Resolved conflict in requirements.txt
+
+[33mcommit c472212a77f00219bee452162018e1ca72ad912a[m
+Author: Saumya Verma <2k22.cse.2213318@gmail.com>
+Date:   Tue Apr 28 20:15:09 2026 +0530
+
+    Updated app.py and added runtime.txt
+
+[33mcommit af6590e0d541249c5737e4f028eb6a53528df20a[m
+Author: Saumya Verma <2k22.cse.2213318@gmail.com>
+Date:   Tue Apr 28 20:09:24 2026 +0530
+
+    Revise requirements.txt with updated dependencies
+    
+    Updated the requirements to include necessary packages.
+
+[33mcommit acceb92359521bab0811d42377a29d2c9ddb6606[m
+Author: Saumya Verma <2k22.cse.2213318@gmail.com>
+Date:   Tue Apr 28 20:07:01 2026 +0530
+
+    updated requirements
+
+[33mcommit c9506186800f1f4541ae8d87d050b1c288154cf1[m
+Author: Saumya Verma <2k22.cse.2213318@gmail.com>
+Date:   Tue Apr 28 18:46:19 2026 +0530
+
+    Add README for Chronic Disease Prediction Web App
+    
+    Added detailed README for the Chronic Disease Prediction Web App, including features, technologies, installation steps, and sample input/output.
+
+[33mcommit d2dbe313831feeb9e9f7b267d6dc4a8702098cab[m
+Author: Saumya Verma <2k22.cse.2213318@gmail.com>
+Date:   Tue Apr 28 18:42:49 2026 +0530
+
+    initial commit
+
+[33mcommit 18217439c5d3a7cf3d0a915ec08d8295c96f0f20[m
+Author: Saumya Verma <2k22.cse.2213318@gmail.com>
+Date:   Tue Apr 28 18:37:27 2026 +0530
+
+    initial commit

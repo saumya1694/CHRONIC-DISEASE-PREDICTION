@@ -6,24 +6,23 @@
     <title>Result</title>
 </head>
 
-<body style="text-align:center; font-family: Arial;">
+<body>
+
+<div class="container">
 
     <h1>Diabetes Prediction Result</h1>
 
-    <br><br>
-
-    <!-- FIXED RESULT -->
     {% if prediction_text == "Diabetic" %}
-        <h2 style="color:red;">Oops! You have DIABETES.</h2>
-        <img src="{{ url_for('static', filename='diabetes.webp') }}" width="250">
+        <h2 class="danger">Oops! You have DIABETES.</h2>
+        <img src="{{ url_for('static', filename='diabetes.webp') }}">
     {% else %}
-        <h2 style="color:green;">Congratulations! You DON'T have diabetes.</h2>
-        <img src="{{ url_for('static', filename='no-diabetes.webp') }}" width="250">
+        <h2 class="success">Congratulations! You DON'T have diabetes.</h2>
+        <img src="{{ url_for('static', filename='no-diabetes.webp') }}">
     {% endif %}
 
-    <br><br>
-
     <a href="/">Go Back</a>
+
+</div>
 
 </body>
 </html>

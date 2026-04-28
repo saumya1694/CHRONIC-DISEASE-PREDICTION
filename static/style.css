@@ -1,0 +1,60 @@
+/* Page background */
+body {
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+.container {
+    background: white;
+    width: 60%;
+    margin: 60px auto;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+h1 {
+    font-size: 45px;
+    color: #333;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+/* Result colors */
+.success {
+    color: green;
+}
+
+.danger {
+    color: red;
+}
+
+/* Images */
+img {
+    width: 350px;
+    margin-top: 20px;
+}
+
+/* Button / link */
+a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+a:hover {
+    background: #0056b3;
+}
